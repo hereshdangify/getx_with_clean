@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gcmusic/Presentation/Pages/playlist_page.dart';
-import 'package:gcmusic/Domain/Application/dependency_injection.dart';
+import 'package:gcmusic/features/feature_home/domain/Application/dependency_injection.dart';
+import 'package:gcmusic/features/feature_home/presentation/screens/playlist_screen.dart';
 
 import 'package:get/get.dart';
 
@@ -15,7 +15,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      home: PlaylistPage(),
+      debugShowCheckedModeBanner: false,
+      home: PlaylistScreen(),
     );
   }
 }
