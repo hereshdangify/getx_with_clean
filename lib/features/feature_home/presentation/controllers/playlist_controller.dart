@@ -1,10 +1,12 @@
-import 'package:gcmusic/core/resources/data_state.dart';
+import 'package:gcmusic/core/constants/routing.dart';
+import 'package:gcmusic/core/data/data_state.dart';
 import 'package:gcmusic/features/feature_home/domain/entities/playlist_entity.dart';
 import 'package:gcmusic/features/feature_home/domain/use_cases/get_playlist_usecase.dart';
 import 'package:get/get.dart';
 
 class PlaylistController extends GetxController {
-  final GetPlaylistUseCase getPlaylistUseCase;
+  // late PlaylistRepository repo;
+  final GetPlaylistUseCaseImp getPlaylistUseCase;
   List<PlayListEntity> entity = [];
 
   bool loading = false;
@@ -23,6 +25,7 @@ class PlaylistController extends GetxController {
         await getPlaylistUseCase.execute();
     if (datastate is DataSuccess) {
       entity = datastate.data!;
+      Get.toNamed(Routings().home);
 
       update();
       loading = false;

@@ -1,7 +1,5 @@
-import 'dart:developer';
-
 import 'package:dio/dio.dart';
-import 'package:gcmusic/core/resources/data_state.dart';
+import 'package:gcmusic/core/data/data_state.dart';
 import 'package:gcmusic/features/feature_home/data/data_Source/remote/api_provider.dart';
 import 'package:gcmusic/features/feature_home/data/models/playlist_model.dart';
 import 'package:gcmusic/features/feature_home/domain/entities/playlist_entity.dart';
@@ -16,7 +14,6 @@ class PlaylistRepositoryImp extends PlaylistRepository {
     try {
       // Response is Dio
       Response response = await apiProvider.fetchMusicList();
-      log('jhmngvhkg');
       if (response.statusCode == 200) {
         List<PlayListEntity> playListEntity =
             PlayListModel.getPlayListModelList(response.data['data']);

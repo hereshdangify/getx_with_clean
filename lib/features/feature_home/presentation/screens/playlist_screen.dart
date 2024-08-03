@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:gcmusic/core/utils/constants/endpoint.dart';
+import 'package:gcmusic/core/constants/endpoint.dart';
 import 'package:get/get.dart';
 
 import '../controllers/playlist_controller.dart';

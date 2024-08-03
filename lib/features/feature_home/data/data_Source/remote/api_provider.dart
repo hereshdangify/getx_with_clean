@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:gcmusic/core/utils/constants/endpoint.dart';
+import 'package:gcmusic/core/constants/endpoint.dart';
 
 class ApiProvider {
   final Dio dio = Dio();
