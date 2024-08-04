@@ -8,6 +8,7 @@ class ApiProvider {
 
   Future<dynamic> fetchMusicList() async {
     var response = await dio.post(Endpoint.baseUrl + getTrack);
+
     return response;
   }
 }

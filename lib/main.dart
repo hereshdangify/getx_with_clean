@@ -3,7 +3,6 @@ import 'package:gcmusic/core/constants/routing.dart';
 import 'package:get/get.dart';
 
 void main() {
-  // initDependencies();
   runApp(const MyApp());
 }
 
